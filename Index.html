@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gitchill</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="icone.png">
+
+    <script>
+        // Função para calcular a idade
+        function calcularIdade() {
+            var dataNascimento = new Date("2009-11-30"); // Substitua pela sua data de nascimento
+            var dataAtual = new Date();
+            var idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
+
+            // Verifica se a data atual é antes do dia do aniversário
+            if (dataAtual.getMonth() < dataNascimento.getMonth() || (dataAtual.getMonth() === dataNascimento.getMonth() && dataAtual.getDate() < dataNascimento.getDate())) {
+                idade--;
+            }
+
+            return idade;
+        }
+
+        // Função para atualizar a idade no dia 30 de novembro
+        function atualizarIdade() {
+            var idade = calcularIdade();
+            document.getElementById("idade").textContent = idade;
+        }
+
+        // Chamada da função para exibir a idade na página
+        window.onload = atualizarIdade;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="centered-text">Bem-vindo ao Gitchill</h1>
+        <p>Ola eu sou o Willian Mais conhecido como Noutz. Eu sou um entusiasta de Python, pentests e ethical hacking. Moro em Salto, SP, e tenho <span id="idade">13</span> anos. Aqui você encontrará meus projetos no meu <a href="https://github.com/Noutzhz">GitHub</a>.</p>
+
+        <h2>Meus Projetos no GitHub</h2>
+        <ul>
+            <li><a href="https://github.com/Noutzhz/NMAP-TOOLS">NMAP-TOOLS</a></li>
+            <li><a href="https://github.com/Noutzhz/Recsec-Terminal">Recsec-Terminal</a></li>
+            <li><a href="https://github.com/Noutzhz/Web-Tools">Web-Tools</a></li>
+            <li><a href="https://github.com/Noutzhz/Api-Test">Api-Test</a></li>
+            <li><a href="https://github.com/Noutzhz/Scan-Lord">Scan-Lord</a></li>
+        </ul>
+
+        <h2>Buy me a Coffee</h2>
+        <a href="https://www.buymeacoffee.com/noutz">
+            <div class="rounded-image">
+                <img src="https://media.discordapp.net/attachments/1105227184077029426/1166783291358183575/109z8y8Q7CsZInYJ8IZ27aQ.png?ex=654bbe9e&is=6539499e&hm=ed1ffcf9d26caa8f51117a686332204894ffc83c240feba95f7a43a1959dd05b&=&width=100&height=100" alt="Compre um Café (Donut)">
+            </div>
+        </a>
+    </div>
+    <footer>
+        <p>Voce pode ver meus projetos ali 👉 <a href="https://github.com/Noutzhz">GitHub</a>
+        
+        Esse site foi feito com o intuito de mostrar meus projetos do <a href="https://github.com/Noutzhz">GitHub</a>
+        como uma forma de portfólio
+        </p>
+    </footer>
+</body>
+</html>
